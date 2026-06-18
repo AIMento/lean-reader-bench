@@ -1,0 +1,17 @@
+{
+  "name": "lean-reader-bench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Token-efficiency × fidelity benchmark for LLM web readers — Lean Reader vs Readability vs raw HTML vs Jina/Firecrawl. Reproducible, fair, all raw outputs committed.",
+  "license": "MIT",
+  "scripts": {
+    "bench": "node scripts/run-bench.js"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "js-tiktoken": "^1.0.21",
+    "jsdom": "^29.1.1",
+    "turndown": "^7.2.4"
+  }
+}
