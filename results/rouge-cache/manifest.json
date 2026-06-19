@@ -1,0 +1,122 @@
+[
+  {
+    "sha": "b44ef5957c36",
+    "url": "https://en.wikipedia.org/wiki/Model_Context_Protocol",
+    "category": "reference",
+    "gt_words": 516,
+    "lean_words": 1070,
+    "read_words": 1225,
+    "lean_extractor": "readability",
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "503164096617",
+    "url": "https://en.wikipedia.org/wiki/Docker_(software)",
+    "category": "reference",
+    "gt_words": 1605,
+    "lean_words": 3056,
+    "read_words": 3360,
+    "lean_extractor": "readability",
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "fe540fbd173f",
+    "url": "https://en.wikipedia.org/wiki/Application_programming_interface",
+    "category": "reference",
+    "gt_words": 3479,
+    "lean_words": 5588,
+    "read_words": 6172,
+    "lean_extractor": "readability",
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "06027a4d005f",
+    "url": "https://en.wikipedia.org/wiki/Object-oriented_programming",
+    "category": "reference",
+    "gt_words": 3644,
+    "lean_words": 5991,
+    "read_words": 6975,
+    "lean_extractor": "readability",
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "a989cd29ae92",
+    "url": "https://en.wikipedia.org/wiki/Functional_programming",
+    "category": "reference",
+    "gt_words": 5348,
+    "lean_words": 8542,
+    "read_words": 9857,
+    "lean_extractor": "readability",
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "dba729febcbd",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/flex",
+    "category": "techdocs",
+    "gt_words": 1423,
+    "lean_words": 1457,
+    "read_words": 2121,
+    "lean_extractor": "defuddle",
+    "gt_handcorrected": true
+  },
+  {
+    "sha": "141588419eb2",
+    "url": "https://docs.github.com/en/get-started/start-your-journey/hello-world",
+    "category": "techdocs",
+    "gt_words": 1357,
+    "lean_words": 1398,
+    "read_words": 1522,
+    "lean_extractor": "defuddle",
+    "gt_handcorrected": true
+  },
+  {
+    "sha": "31d8fac55c08",
+    "url": "https://nodejs.org/api/path.html",
+    "category": "techdocs",
+    "gt_words": 1893,
+    "lean_words": 1858,
+    "read_words": 1998,
+    "lean_extractor": "defuddle",
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "4863eab2e04d",
+    "url": "https://www.python.org",
+    "category": "marketing",
+    "gt_words": 296,
+    "lean_words": 184,
+    "read_words": 199,
+    "lean_extractor": "defuddle",
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "8cb199d5c4ce",
+    "url": "https://redis.io",
+    "category": "marketing",
+    "gt_words": 261,
+    "lean_words": 219,
+    "read_words": 262,
+    "lean_extractor": "defuddle",
+    "gt_handcorrected": true
+  },
+  {
+    "sha": "677dac846f2c",
+    "url": "https://www.netlify.com",
+    "category": "marketing",
+    "gt_words": 484,
+    "lean_words": 353,
+    "read_words": 365,
+    "lean_extractor": "readability",
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "395f0690074c",
+    "url": "https://www.paulgraham.com/avg.html",
+    "category": "blog",
+    "gt_words": 4456,
+    "lean_words": 4457,
+    "read_words": 4450,
+    "lean_extractor": "defuddle",
+    "gt_handcorrected": true
+  }
+]

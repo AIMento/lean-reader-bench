@@ -1,0 +1,131 @@
+*   [Platform](#)
+*   [Deploy](https://redis.io/docs/)
+    
+    Tools
+    
+    *   [
+        
+        Redis InsightUI to visualize, query, & debug
+        
+        ](https://redis.io/insight/)
+    *   [
+        
+        RIOTGet data into Redis from anywhere
+        
+        ](https://redis.io/docs/latest/integrate/riot/)
+    *   [
+        
+        Client librariesPython, Node, Java, Go, .Net, & more
+        
+        ](https://redis.io/docs/latest/develop/clients/)
+    *   [
+        
+        SDKsConnect Redis to your apps
+        
+        ](https://redis.io/docs/latest/integrate/)
+    
+*   [Solutions](#)
+    
+    AI & ML Apps
+    
+    *   [Scale agent & agentic systems Everything you need to be successful](https://redis.io/docs/latest/develop/ai/) 
+    *   [
+        
+        RAGUnderstand how Redis powers RAG
+        
+        ](https://redis.io/docs/latest/develop/get-started/rag/)
+    *   [
+        
+        Semantic searchRight answers, right now
+        
+        ](https://redis.io/query-engine/)
+    *   [
+        
+        MLLeverage your features, fast
+        
+        ](https://redis.io/docs/latest/develop/ai/featureform/)
+    *   [
+        
+        Token optimizationAll the AI without all the cost
+        
+        ](https://redis.io/langcache/)
+    
+    Core Workloads
+    
+    *   [
+        
+        Fraud detectionStop fraud, protect customers
+        
+        ](https://redis.io/blog/a-complete-guide-to-ai-fraud-detection/)
+    *   [
+        
+        Real-time decisionsAct on data in real time
+        
+        ](https://redis.io/resources/videos/architecting-the-real-time-decisioning-stack/)
+    *   [Caching & performanceOur bread & butter](https://redis.io/solutions/caching/) 
+    *   [
+        
+        Real-time messagingStreams at the speed of thought
+        
+        ](https://redis.io/solutions/messaging/)
+    *   [
+        
+        Session managementConsistent experiences everywhere
+        
+        ](https://redis.io/solutions/session-store/)
+    *   [
+        
+        LeaderboardsKnow who’s winning
+        
+        ](https://redis.io/solutions/leaderboards/)
+    
+*   [Devs](https://redis.io/pricing/)
+    
+    Learning
+    
+    *   [
+        
+        BlogAll the words
+        
+        ](https://redis.io/blog/)
+    *   [
+        
+        Resource centerEverything you need, in one place
+        
+        ](https://redis.io/resources/)
+    *   [
+        
+        Demo centerAnything & everything, in action
+        
+        ](https://redis.io/demo-center/)
+    *   [
+        
+        Reference architecturesNo guessing, just deploy
+        
+        ](https://redis.io/resources/architecture-diagrams/)
+    
+*   [Resources](#)
+    
+    ![Ulta logo](https://cdn.sanity.io/images/sy1jschh/production/c1410144ed90a204abab3613902c8b74edd5db82-121x49.svg)
+    
+    saw a 40% increase in revenue generation through their new Redis powered online experience. [See how](https://redis.io/customers/ulta-beauty/)
+    
+    ![Superlinked logo](https://cdn.sanity.io/images/sy1jschh/production/c8553e0f212a75eb82a32e02f6fe44b521c250c5-165x50.svg)
+    
+    uses Redis for 100+ vector search queries per second. [See how](https://redis.io/customers/superlinked/)
+    
+    ![Sony LIV logo](https://cdn.sanity.io/images/sy1jschh/production/c227d5ae7d0a065ef0e3ca86613e905557407d6d-51x50.svg)
+    
+    achieved 37% faster API response times while having a 15% lower memory footprint with Redis. [See how](https://redis.io/customers/sonyliv/)
+    
+    ![plivo logo](https://cdn.sanity.io/images/sy1jschh/production/d0af25e2df9b7982c3ec70a06f82f38669e31bb2-164x42.svg)
+    
+    saw over a billon API request per month with Redis. [See how](https://redis.io/customers/plivo/)
+    
+    Latest
+    
+    ![Image](https://cdn.sanity.io/images/sy1jschh/production/edf97741b3f2f558072eef734b2444964244ed0e-3750x1963.png?w=3840&q=80&fit=clip&auto=format)
+    
+    Real-time context engine: Fresh context for better AI agents
+    
+    Jun. 10, 2026

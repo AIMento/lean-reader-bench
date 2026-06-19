@@ -51,13 +51,30 @@ Naïvely, "Lean uses 4.3× fewer tokens than Jina." A skeptic correctly asks: di
 
 **The corpus-wide cross-check is weaker than it looks, and we won't overstate it.** The reassurance "Lean and Readability — two independent extractors — agree" only holds where Lean's chosen extractor is **Defuddle** (blog: 21/21, techdocs: 32/34 — there word_keep median is 1.00, genuine independent agreement). It is **circular on the 30 reference (Wikipedia-class) pages**, because there Lean's selected extractor *is* Readability (30/30) — so `word_keep` is Readability-minus-minimize divided by Readability, a self-comparison, not corroboration. And on that subset the number points the other way:
 
-> **Reference pages: word_keep median 0.90, all 30/30 below 1.0.** `minimize` removes ~10% of Readability's words there (edit-links, citation markers, whitespace). Whether any of that 10% is body content is **unresolved** — Readability can't be the referee when it *is* the extractor.
+> **Reference pages: word_keep median 0.90, all 30/30 below 1.0.** `minimize` removes ~10% of Readability's words there (edit-links, citation markers, whitespace). Whether any of that 10% is body content was **unresolved by the proxy** — Readability can't be the referee when it *is* the extractor. **The ground-truth ROUGE-L pass below now resolves it: the 10% is noise, not body (reference recall 0.99).**
 
 So: the Jina-chrome story is **established on chrome-heavy techdocs hub pages, and unresolved on the long-form reference bucket.** The honest one-liner for launch uses only the verified case:
 
 > *Jina bills you 3,475 words for MDN's HTTP Methods page — ~3,076 of them navigation links and a cookie banner. Lean gives you the 399 that are the documentation.*
 
-The ground-truth ROUGE-L pass on a stratified sample (the only thing that resolves the reference bucket) is the **top roadmap item**, listed in FAIRNESS.md.
+The ground-truth ROUGE-L pass on a stratified sample (the only thing that resolves the reference bucket) **has now been run — it resolves the bucket in Lean's favor. See the next section.**
+
+## Honest caveat 2 — RESOLVED: ground-truth ROUGE-L fidelity (the reference bucket)
+
+The reference word_keep 0.90 is **noise removal, not body truncation** — measured, not asserted. A stratified 12-URL **hand-verified** ground-truth sample (`scripts/rouge-capture.js` captures candidate bodies + frozen extractor outputs; the bodies are then hand-corrected into `corpus/groundtruth/<sha>.txt`; `scripts/rouge.js` scores offline → `results/rouge.jsonl`). The ground truth is the page's **own DOM body prose with citation / reference / nav apparatus removed** — produced independently of Readability's content-scoring, so it can referee the bucket where Lean's extractor *is* Readability. Sample: 5 reference, 3 techdocs, 3 marketing, 1 blog control; biased toward the `jina_keep<0.7` ("suspected dropped content") set.
+
+| Bucket (n) | Lean ROUGE-L recall (median) | Lean ROUGE-1 recall | Lean precision\* | Readability recall (same GT) |
+|---|---|---|---|---|
+| **reference (5)** | **0.99** | 1.00 | 0.55 | 0.99 |
+| techdocs (3) | 0.90 | 0.91 | 0.98 | 0.97 |
+| marketing (3) | 0.68 | 0.68 | 0.97 | 0.54 |
+| blog control (1, paulgraham) | 1.00 | 1.00 | 1.00 | 1.00 |
+
+**The reference verdict.** Lean keeps **~99% of the article body** (per-page recall 0.99 / 1.00 / 1.00 / 0.99 / 0.99). The body tokens it misses are **0–12 per page** and are section-heading duplicates and LaTeX `displaystyle` artifacts — **no dropped sentences** (see the per-page `missed_top` in `rouge.jsonl`). The decisive, non-circular fact: **Lean's recall (0.99) equals Readability's recall (0.99) on the same independent ground truth.** So the word_keep<1.0 gap (Lean emits 0.90× Readability's words) is the `minimize` pass stripping citation markers, `[edit]` links, image alt-text and whitespace — **not body content.** If `minimize` had cut body, Lean's recall would fall *below* Readability's; it does not. This is the proof the word-count proxy structurally could not give.
+
+\***On the reference precision (0.55).** Precision is scored against a **prose-only** GT that excludes the citation/reference list by definition, so ~45% of Lean's reference-page tokens are the **bibliography / citations / external-links** it carries (Readability carries them too — its precision is the same or lower). The missed-token diagnostic confirms the residual is references, **not navigation chrome**. For retrieval/RAG that apparatus is arguably signal; we report the conservative number rather than launder it.
+
+**Where Lean is weaker (surfaced, not hidden).** **Marketing recall is 0.68** — on landing pages Lean extracts a clean, on-target subset (precision 0.97) but misses peripheral feed sections (python.org's news/events lists, netlify's secondary feature copy). Marketing is excluded from every headline figure anyway. Techdocs recall 0.90 is depressed only by code-block / API-version-table token differences (`div`, `class`, `added`, `versionchanges`), not prose loss — precision stays 0.92–0.99. Two cross-checks worth noting: the **blog control returns a perfect 1.00 / 1.00**, validating the scorer end-to-end; and on **redis.io Lean recall is 0.72 vs Readability's 0.10** — a dual-extractor reliability win (Defuddle recovered the body Readability missed entirely).
 
 ## Honest caveat 3 — the partial detector does NOT catch SPA shells
 
@@ -85,6 +102,6 @@ These are the **static skeleton of a client-rendered app**, not articles. They a
 - **Failures recorded as `null`, never dropped:** raw fetch bot-blocked on 6 StackOverflow pages + `flask`; Jina absent on 3 (`nodejs.org/api/fs`, `github.com`, `supabase.com`).
 - **Row identity:** the runner's 48-char short label collides for several MDN `/Web/JavaScript/` URLs. `latest.csv` now carries the **full URL** as its first column (`seal.js` reconstructs it from corpus order), so all 114 rows are individually re-fetchable. 2 techdocs URLs were skipped by the tail's short-key dedup (MDN `…/Global_Objects/JSON` and `…/Global_Objects/Map`, which collided with earlier `/Web/JavaScript/` rows); the corpus has 116, 114 measured.
 - **Extractor split:** Defuddle 75, Readability 37, none 2.
-- **Everything committed:** `corpus/urls.jsonl`, `results/latest.csv`, raw `results/progress*.jsonl`, and `scripts/seal.js` — re-run and dispute every number. Fidelity is a word-count proxy, not ROUGE-L ground truth; we claim **token efficiency + a retention proxy**, not a proven fidelity victory.
+- **Everything committed:** `corpus/urls.jsonl`, `results/latest.csv`, raw `results/progress*.jsonl`, and `scripts/seal.js` — re-run and dispute every number. Fidelity is now measured **two ways**: the corpus-wide word-count proxy **and** a 12-page hand-verified ROUGE-L ground-truth sample (`corpus/groundtruth/`, `scripts/rouge.js`, `results/rouge.jsonl`) — reference recall **0.99**, equal to Readability's, so the 0.90 word_keep is noise removal, not truncation. We claim **token efficiency + a now-ground-truthed fidelity floor on the sampled buckets**, and we surface the adverse number (marketing recall 0.68).
 
 _MIT._

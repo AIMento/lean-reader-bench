@@ -1,0 +1,270 @@
+"Api.php" redirects here. For the Wikipedia API, see Special:ApiHelp.
+
+An **application programming interface** (**API**) is a connection between computers or between computer programs. It is a type of software interface, offering a service to other pieces of software.[\[1\]](#cite_note-1)[\[2\]](#cite_note-:0-2) A document or standard that describes how to build such a connection or interface is called an _API specification_. A computer system that meets this standard is said to _implement_ or _expose_ an API. The term API may refer either to the specification or to the implementation.
+
+In contrast to a user interface, which connects a computer to a person, an application programming interface connects computers or pieces of software to each other. It is not intended to be used directly by a person (the end user) other than a computer programmer[\[2\]](#cite_note-:0-2) who is incorporating it into software. An API is often made up of different parts which act as tools or services that are available to the programmer. A program or a programmer that uses one of these parts is said to _call_ that portion of the API. The calls that make up the API are also known as subroutines, methods, requests, or endpoints. An API specification _defines_ these calls, meaning that it explains how to use or implement them.
+
+One of the main purpose of APIs is to hide the internal details of how a system works, exposing only those parts a programmer will find useful and keeping them consistent even if the internal details later change. An API may be custom-built for a particular pair of systems, or it may be a shared standard allowing interoperability among many systems.
+
+The term API is often used to refer to web APIs,[\[3\]](#cite_note-Lane2019-3) which allow communication between computers that are joined by the internet. There are also APIs for programming languages, software libraries, computer operating systems, and computer hardware. APIs originated in the 1940s, though the term did not emerge until the 1960s and 70s.
+
+## Purpose
+
+An API opens a software system to interactions from the outside. It allows two software systems to communicate across a boundary — an interface — using mutually agreed-upon signals.[\[4\]](#cite_note-Pedro2024-4) In other words, an API connects software entities together. Unlike a user interface, an API is typically not visible to users. It is an "under the hood" portion of a software system, used for machine-to-machine communication.[\[5\]](#cite_note-5)
+
+A well-designed API exposes only objects or actions needed by software or software developers. It hides details that have no use. This abstraction simplifies programming.[\[6\]](#cite_note-Clarke4-6)
+
+Metaphorically, APIs connect software like interlocking blocks.
+
+Building software using APIs has been compared to using building-block toys, such as Lego bricks. Software services or software libraries are analogous to the bricks; they may be joined together via their APIs, composing a new software product.[\[7\]](#cite_note-7) The process of joining is called _integration_.[\[4\]](#cite_note-Pedro2024-4)
+
+As an example, consider a weather sensor that offers an API. When a certain message is transmitted to the sensor, it will detect the current weather conditions and reply with a weather report. The message that activates the sensor is an API _call_, and the weather report is an API _response_.[\[8\]](#cite_note-8) A weather forecasting app might integrate with a number of weather sensor APIs, gathering weather data from throughout a geographical area.
+
+An API is often compared to a contract. It represents an agreement between parties: a service provider who offers the API and the software developers who rely upon it. If the API remains stable, or if it changes only in predictable ways, developers' confidence in the API will increase. This may increase their use of the API.[\[9\]](#cite_note-9)
+
+## History of the term
+
+A diagram from 1978 proposing the expansion of the idea of the API to become a general programming interface, beyond application programs alone[\[10\]](#cite_note-NBS1981-10)
+
+The term _API_ initially described an interface only for end-user-facing programs, known as application programs. This origin is still reflected in the name "application programming interface." Today, the term is broader, including also utility software and even hardware interfaces.[\[11\]](#cite_note-Bloch2018-11)
+
+The idea of the API is much older than the term itself. British computer scientists Maurice Wilkes and David Wheeler worked on a modular software library in the 1940s for EDSAC, an early computer. The subroutines in this library were stored on punched paper tape organized in a filing cabinet. This cabinet also contained what Wilkes and Wheeler called a "library catalog" of notes about each subroutine and how to incorporate it into a program. Today, such a catalog would be called an API (or an API specification or API documentation) because it instructs a programmer on how to use (or "call") each subroutine that the programmer needs.[\[11\]](#cite_note-Bloch2018-11)
+
+Wilkes and Wheeler's book _The Preparation of Programs for an Electronic Digital Computer_ contains the first published API specification. Joshua Bloch considers that Wilkes and Wheeler "latently invented" the API, because it is more of a concept that is discovered than invented.[\[11\]](#cite_note-Bloch2018-11)
+
+Although the people who coined the term API were implementing software on a Univac 1108, the goal of their API was to make hardware independent programs possible.[\[12\]](#cite_note-CottonGreatorex1968-12)
+
+The term "application program interface" (without an _\-ing_ suffix) is first recorded in a paper called _Data structures and techniques for remote computer graphics_ presented at an AFIPS conference in 1968.[\[13\]](#cite_note-13)[\[11\]](#cite_note-Bloch2018-11) The authors of this paper use the term to describe the interaction of an application—a graphics program in this case—with the rest of the computer system. A consistent application interface (consisting of Fortran subroutine calls) was intended to free the programmer from dealing with idiosyncrasies of the graphics display device, and to provide hardware independence if the computer or the display were replaced.[\[12\]](#cite_note-CottonGreatorex1968-12)
+
+The term was introduced to the field of databases by C. J. Date[\[14\]](#cite_note-14) in a 1974 paper called _The Relational and Network Approaches: Comparison of the Application Programming Interface_.[\[15\]](#cite_note-15) An API became a part of the ANSI/SPARC framework for database management systems. This framework treated the application programming interface separately from other interfaces, such as the query interface. Database professionals in the 1970s observed these different interfaces could be combined; a sufficiently rich application interface could support the other interfaces as well.[\[10\]](#cite_note-NBS1981-10)
+
+This observation led to APIs that supported all types of programming, not just application programming. By 1990, the API was defined simply as "a set of services available to a programmer for performing certain tasks" by technologist Carl Malamud.[\[16\]](#cite_note-16)
+
+Screenshot of Web API documentation written by NASA
+
+The idea of the API was expanded again with the dawn of remote procedure calls and web APIs. As computer networks became common in the 1970s and 80s, programmers wanted to call libraries located not only on their local computers, but on computers located elsewhere. These remote procedure calls were well supported by the Java language in particular. In the 1990s, with the spread of the internet, standards like CORBA, COM, and DCOM competed to become the most common way to expose API services.[\[17\]](#cite_note-JinSahniShevat2018-17)
+
+Roy Fielding's dissertation _Architectural Styles and the Design of Network-based Software Architectures_ at UC Irvine in 2000 outlined Representational state transfer (REST) and described the idea of a "network-based Application Programming Interface" that Fielding contrasted with traditional "library-based" APIs.[\[18\]](#cite_note-18) XML and JSON web APIs saw widespread commercial adoption beginning in 2000 and continuing as of 2021. The web API is now the most common meaning of the term API.[\[3\]](#cite_note-Lane2019-3)
+
+The Semantic Web proposed by Tim Berners-Lee in 2001 included "semantic APIs" that recast the API as an open, distributed data interface rather than a software behavior interface.[\[19\]](#cite_note-19) Proprietary interfaces and agents became more widespread than open ones, but the idea of the API as a data interface took hold. Because web APIs are widely used to exchange data of all kinds online, API has become a broad term describing much of the communication on the internet.[\[17\]](#cite_note-JinSahniShevat2018-17) When used in this way, the term API has overlap in meaning with the term communication protocol.
+
+## Types
+
+### Libraries and frameworks
+
+The interface to a software library is one type of API. The API describes and prescribes the "expected behavior" (a specification) while the library is an "actual implementation" of this set of rules.
+
+A single API can have multiple implementations (or none, being abstract) in the form of different libraries that share the same programming interface.
+
+The separation of the API from its implementation can allow programs written in one language to use a library written in another. For example, because Scala and Java compile to compatible bytecode, Scala developers can take advantage of any Java API.[\[20\]](#cite_note-OderskySpoonVenners8-20)
+
+API use can vary depending on the type of programming language involved. An API for a procedural language such as Lua could consist primarily of basic routines to execute code, manipulate data or handle errors while an API for an object-oriented language, such as Java, would provide a specification of classes and its class methods.[\[21\]](#cite_note-21)[\[22\]](#cite_note-Sintes16-22) Hyrum's law states that "With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviors of your system will be depended on by somebody."[\[23\]](#cite_note-23) Meanwhile, several studies show that most applications that use an API tend to use a small part of the API.[\[24\]](#cite_note-24)
+
+Language bindings are also APIs. By mapping the features and capabilities of one language to an interface implemented in another language, a language binding allows a library or service written in one language to be used when developing in another language.[\[25\]](#cite_note-Emery-25) Tools such as SWIG and F2PY, a Fortran\-to-Python interface generator, facilitate the creation of such interfaces.[\[26\]](#cite_note-26)
+
+An API can also be related to a software framework: a framework can be based on several libraries implementing several APIs, but unlike the normal use of an API, the access to the behavior built into the framework is mediated by extending its content with new classes plugged into the framework itself.
+
+Moreover, the overall program flow of control can be out of the control of the caller and in the framework's hands by inversion of control or a similar mechanism.[\[27\]](#cite_note-27)[\[28\]](#cite_note-28)
+
+### Operating systems
+
+An API can specify the interface between an application and the operating system.[\[29\]](#cite_note-Oreilly91-29) POSIX, for example, specifies a set of common APIs that aim to enable an application written for a POSIX conformant operating system to be compiled for another POSIX conformant operating system.
+
+Linux and Berkeley Software Distribution are examples of operating systems that implement the POSIX APIs.[\[30\]](#cite_note-WestDedrick16-30)
+
+Microsoft has shown a strong commitment to a backward-compatible API, particularly within its Windows API (Win32) library, so older applications may run on newer versions of Windows using an executable-specific setting called "Compatibility Mode".[\[31\]](#cite_note-31) How much Microsoft developers' access to the company's operating systems' internal APIs is an advantage is unclear. Richard A. Shaffer of _Technologic Computer Letter_ in 1987 compared the situation to a baseball game in which "Microsoft owns all the bats and the field",[\[32\]](#cite_note-barney19871102-32) and large vendors like Lotus Development and Ashton-Tate reportedly received information about MS-DOS 5.0 that smaller software developers did not.[\[33\]](#cite_note-barney19860707-33) Ed Esber of Ashton-Tate said in a 1987 interview, however, that Bill Gates told him that his developers sometimes had to rewrite software based on early APIs. Gates noted in the interview that Microsoft's Apple Macintosh applications were more successful than those for MS-DOS, because his company did not have to also devote resources to Mac OS.[\[34\]](#cite_note-computerworld19871102interview-34)
+
+An API differs from an application binary interface (ABI) in that an API is source code based while an ABI is binary based. For instance, POSIX provides APIs while the Linux Standard Base provides an ABI.[\[35\]](#cite_note-35)[\[36\]](#cite_note-36)
+
+### Remote APIs
+
+Remote APIs allow developers to manipulate remote resources through protocols, specific standards for communication that allow different technologies to work together, regardless of language or platform. For example, the Java Database Connectivity API allows developers to query many different types of databases with the same set of functions, while the Java remote method invocation API uses the Java Remote Method Protocol to allow invocation of functions that operate remotely, but appear local to the developer.[\[37\]](#cite_note-Bierhoff9-37)[\[38\]](#cite_note-Wilson16-38)
+
+Therefore, remote APIs are useful in maintaining the object abstraction in object-oriented programming; a method call, executed locally on a proxy object, invokes the corresponding method on the remote object, using the remoting protocol, and acquires the result to be used locally as a return value.
+
+A modification of the proxy object will also result in a corresponding modification of the remote object.[\[39\]](#cite_note-AdvancedCorba-39)
+
+### Web APIs
+
+Web APIs are the defined interfaces through which interactions happen between an enterprise and applications that use its assets, which also is a Service Level Agreement (SLA) to specify the functional provider and expose the service path or URL for its API users. An API approach is an architectural approach that revolves around providing a program interface to a set of services to different applications serving different types of consumers.[\[40\]](#cite_note-40)
+
+When used in the context of web development, an API is typically defined as a set of specifications, such as Hypertext Transfer Protocol (HTTP) request messages, along with a definition of the structure of response messages, usually in an Extensible Markup Language (XML) or JavaScript Object Notation (JSON) format. An example might be a shipping company API that can be added to an eCommerce-focused website to facilitate ordering shipping services and automatically include current shipping rates, without the site developer having to enter the shipper's rate table into a web database. While "web API" historically has been virtually synonymous with web service, the recent\_[when?_\] trend (so-called Web 2.0) has been moving away from Simple Object Access Protocol (SOAP) based web services and service-oriented architecture (SOA) towards more direct representational state transfer (REST) style web resources and resource-oriented architecture (ROA).[\[41\]](#cite_note-41) Part of this trend is related to the Semantic Web movement toward Resource Description Framework (RDF), a concept to promote web-based ontology engineering technologies. Web APIs allow the combination of multiple APIs into new applications known as mashups.[\[42\]](#cite_note-42) In the social media space, web APIs have allowed web communities to facilitate sharing content and data between communities and applications. In this way, content that is created in one place dynamically can be posted and updated to multiple locations on the web.[\[43\]](#cite_note-Parr16-43) For example, Twitter's REST API allows developers to access core Twitter data and the Search API provides methods for developers to interact with Twitter Search and trends data.[\[44\]](#cite_note-44)
+
+## Design
+
+The design of an API has significant impact on its usage.[\[6\]](#cite_note-Clarke4-6) The principle of information hiding describes the role of programming interfaces as enabling modular programming by hiding the implementation details of the modules so that users of modules need not understand the complexities inside the modules.[\[45\]](#cite_note-Parnas72-45) Thus, the design of an API attempts to provide only the tools a user would expect.[\[6\]](#cite_note-Clarke4-6) The design of programming interfaces represents an important part of software architecture, the organization of a complex piece of software.[\[46\]](#cite_note-GarlanShaw94-46)
+
+## Release policies
+
+APIs are one of the more common ways technology companies integrate. Those that provide and use APIs are considered as being members of a business ecosystem.[\[47\]](#cite_note-47)
+
+The main policies for releasing an API are:[\[48\]](#cite_note-Boyd16-48)
+
+-   Private: The API is for internal company use only.
+-   Partner: Only specific business partners can use the API. For example, vehicle for hire companies such as Uber and Lyft allow approved third-party developers to directly order rides from within their apps. This allows the companies to exercise quality control by curating which apps have access to the API, and provides them with an additional revenue stream.[\[49\]](#cite_note-49)
+-   Public: The API is available for use by the public. For example, Microsoft makes the Windows API public, and Apple releases its API Cocoa, so that software can be written for their platforms. Not all public APIs are generally accessible by everybody. For example, Internet service providers like Cloudflare or Voxility, use RESTful APIs to allow customers and resellers access to their infrastructure information, DDoS stats, network performance or dashboard controls.[\[50\]](#cite_note-Cloudflare-50) Access to such APIs is granted either by “API tokens”, or customer status validations.[\[51\]](#cite_note-SmashMagazine-51)
+
+### Public API implications
+
+An important factor when an API becomes public is its "interface stability". Changes to the API—for example adding new parameters to a function call—could break compatibility with the clients that depend on that API.[\[52\]](#cite_note-researchgate.net-52)
+
+When parts of a publicly presented API are subject to change and thus not stable, such parts of a particular API should be documented explicitly as "unstable". For example, in the Google Guava library, the parts that are considered unstable, and that might change soon, are marked with the Java annotation `@Beta`.[\[53\]](#cite_note-53)
+
+A public API can sometimes declare parts of itself as _deprecated_ or rescinded. This usually means that part of the API should be considered a candidate for being removed, or modified in a backward incompatible way. Therefore, these changes allow developers to transition away from parts of the API that will be removed or not supported in the future.[\[54\]](#cite_note-OracleDeprecation16-54)
+
+Client code may contain innovative or opportunistic usages that were not intended by the API designers. In other words, for a library with a significant user base, when an element becomes part of the public API, it may be used in diverse ways.[\[55\]](#cite_note-MendezBaudry2013-55) On February 19, 2020, Akamai published their annual “State of the Internet” report, showcasing the growing trend of cybercriminals targeting public API platforms at financial services worldwide. From December 2017 through November 2019, Akamai witnessed 85.42 billion credential violation attacks. About 20%, or 16.55 billion, were against hostnames defined as API endpoints. Of these, 473.5 million have targeted financial services sector organizations.[\[56\]](#cite_note-VentureBeat-56)
+
+## API documentation
+
+API documentation describes what services an API offers and how to use those services, aiming to cover everything a client would need to know for practical purposes.
+
+Documentation is crucial for the development and maintenance of applications using the API.[\[57\]](#cite_note-DekelHerbsleb9-57) API documentation is traditionally found in documentation files but can also be found in social media such as blogs, forums, and Q&A websites.[\[58\]](#cite_note-ParninTreude11-58)
+
+Traditional documentation files are often presented via a documentation system, such as Javadoc or Pydoc, that has a consistent appearance and structure. However, the types of content included in the documentation differs from API to API.[\[59\]](#cite_note-MaalejRobillard12-59)
+
+In the interest of clarity, API documentation may include a description of classes and methods in the API as well as typical usage scenarios, code snippets, design rationales, performance discussions, and contracts, but implementation details of the API services themselves are usually omitted. It can take a number of forms, including instructional documents, tutorials, and reference works. It'll also include a variety of information types, including guides and functionalities.
+
+Restrictions and limitations on how the API can be used are also covered by the documentation. For instance, documentation for an API function could note that its parameters cannot be null, that the function itself is not thread safe.[\[60\]](#cite_note-MonperrusEichberg11-60) Because API documentation tends to be comprehensive, it is a challenge for writers to keep the documentation updated and for users to read it carefully, potentially yielding bugs.[\[52\]](#cite_note-researchgate.net-52)
+
+API documentation can be enriched with metadata information like Java annotations. This metadata can be used by the compiler, tools, and by the _run-time_ environment to implement custom behaviors or custom handling.[\[61\]](#cite_note-61)
+
+It is possible to generate API documentation in a data-driven manner. By observing many programs that use a given API, it is possible to infer the typical usages, as well the required contracts and directives.[\[62\]](#cite_note-62) Then, templates can be used to generate natural language from the mined data.
+
+## Dispute over copyright protection for APIs
+
+In 2010, Oracle Corporation sued Google for having distributed a new implementation of Java embedded in the Android operating system.[\[63\]](#cite_note-63) Google had not acquired any permission to reproduce the Java API, although permission had been given to the similar OpenJDK project. Judge William Alsup ruled in the _Oracle v. Google_ case that APIs cannot be copyrighted in the U.S. and that a victory for Oracle would have widely expanded copyright protection to a "functional set of symbols" and allowed the copyrighting of simple software commands:
+
+> To accept Oracle's claim would be to allow anyone to copyright one version of code to carry out a system of commands and thereby bar all others from writing its different versions to carry out all or part of the same commands.[\[64\]](#cite_note-64)[\[65\]](#cite_note-65)
+
+Alsup's ruling was overturned in 2014 on appeal to the Court of Appeals for the Federal Circuit, though the question of whether such use of APIs constitutes fair use was left unresolved.[\[66\]](#cite_note-66)[\[67\]](#cite_note-67)
+
+In 2016, following a two-week trial, a jury determined that Google's reimplementation of the Java API constituted fair use, but Oracle vowed to appeal the decision.[\[68\]](#cite_note-68) Oracle won on its appeal, with the Court of Appeals for the Federal Circuit ruling that Google's use of the APIs did not qualify for fair use.[\[69\]](#cite_note-bbn_march2018-69) In 2019, Google appealed to the Supreme Court of the United States over both the copyrightability and fair use rulings, and the Supreme Court granted review.[\[70\]](#cite_note-ars_Jan2019-70) Due to the COVID-19 pandemic, the oral hearings in the case were delayed until October 2020.[\[71\]](#cite_note-71)
+
+The case was decided by the Supreme Court in Google's favor.[\[72\]](#cite_note-72)
+
+## Examples
+
+-   ASPI for SCSI device interfacing
+-   Cocoa and Carbon for the Macintosh
+-   DirectX for Microsoft Windows
+-   EHLLAPI
+-   Java APIs
+-   ODBC for Microsoft Windows
+-   OpenAL cross-platform sound API
+-   OpenCL cross-platform API for general-purpose computing for CPUs & GPUs
+-   OpenGL cross-platform graphics API
+-   OpenMP API that supports multi-platform shared memory multiprocessing programming in C, C++, and Fortran on many architectures, including Unix and Microsoft Windows platforms.
+-   Server application programming interface (SAPI)
+-   Simple DirectMedia Layer (SDL)
+
+## See also
+
+-   API testing
+-   API writer
+-   Application binary interface
+-   Augmented web
+-   Calling convention
+-   Common Object Request Broker Architecture (CORBA)
+-   Comparison of application virtual machines
+-   Document Object Model (DOM)
+-   Foreign function interface
+-   Front and back ends
+-   Interface (computing)
+-   Interface control document
+-   List of 3D graphics APIs
+-   Microservices
+-   Name mangling
+-   Open API
+-   Open Service Interface Definitions
+-   Parsing
+-   Plugin
+-   RAML (software)
+-   Software development kit (SDK)
+-   Web API
+-   Web content vendor
+-   XPCOM
+
+## References
+
+1.  **^** Perron, Brian E.; Luan, Hui; Qi, Zia; Victor, Bryan G.; Goyal, Kavin (2024). "Demystifying Application Programming Interfaces (APIs): Unlocking the Power of Large Language Models and Other Web-based AI Services in Social Work Research". arXiv:2410.20211 \[cs.SE\].
+2.  ^ _**a**_ _**b**_ Reddy, Martin (2011). _API Design for C++_. Elsevier Science. p. 1. ISBN 9780123850041.
+3.  ^ _**a**_ _**b**_ Lane, Kin (October 10, 2019). "Intro to APIs: History of APIs". _Postman_. Retrieved September 18, 2020. When you hear the acronym "API" or its expanded version "Application Programming Interface," it is almost always in reference to our modern approach, in that we use HTTP to provide access to machine readable data in a JSON or XML format, often simply referred to as "web APIs." APIs have been around almost as long as computing, but modern web APIs began taking shape in the early 2000s.
+4.  ^ _**a**_ _**b**_ Pedro, Bruno (2024). _Building an API Product: Design, Implement, Release, and Maintain API Products that Meet User Needs_. Packt Publishing. p. 4. ISBN 9781837638536.
+5.  **^** Biehl, Matthias (2016). _RESTful API Design_. API-University Press. p. 10. ISBN 9781514735169.
+6.  ^ _**a**_ _**b**_ _**c**_ Clarke, Steven (2004). "Measuring API Usability". _Dr. Dobb's_. Retrieved 29 July 2016.
+7.  **^** Jin, Brenda; Sahni, Saurabh; Shevat, Amir (2018). "Preface". _Designing Web APIs: Building APIs That Developers Love_. O'Reilly Media. ISBN 9781492026877.
+8.  **^** Geewax, JJ (2021). _API Design Patterns_. Manning. p. 6. ISBN 9781638350330.
+9.  **^** Jacobson, Daniel; Brail, Greg; Woods, Dan (2011). _APIs: A Strategy Guide_. O'Reilly Media. p. 4. ISBN 9781449321642.
+10.  ^ _**a**_ _**b**_ Database architectures – a feasibility workshop (Report). Washington, DC: U.S. Department of Commerce, National Bureau of Standards. April 1981. pp. 45–47\. hdl:2027/mdp.39015077587742. LCCN 81600004. NBS special publication 500-76. Retrieved September 18, 2020.
+11.  ^ _**a**_ _**b**_ _**c**_ _**d**_ Bloch, Joshua (August 8, 2018). _A Brief, Opinionated History of the API_ (Speech). QCon. San Francisco: InfoQ. Retrieved September 18, 2020.
+12.  ^ _**a**_ _**b**_ Cotton, Ira W.; Greatorex, Frank S. (December 1968). "Data structures and techniques for remote computer graphics". _AFIPS '68: Proceedings of the December 9–11, 1968, Fall Joint Computer Conference_. AFIPS 1968 Fall Joint Computer Conference. Vol. I. San Francisco, California: Association for Computing Machinery. pp. 533–544\. doi:10.1145/1476589.1476661. ISBN 978-1450378994. OCLC 1175621908.
+13.  **^** "application program interface". _Oxford English Dictionary_ (online ed.). Oxford University Press. (Subscription or participating institution membership required.)
+14.  **^** Date, C. J. (2019). _E. F. Codd and Relational Theory: A Detailed Review and Analysis of Codd's Major Database Writings_. Lulu.com. p. 135. ISBN 978-1684705276.
+15.  **^** Date, C. J.; Codd, E. F. (January 1975). "The relational and network approaches: Comparison of the application programming interfaces". In Randall Rustin (ed.). _Proceedings of 1974 ACM-SIGMOD Workshop on Data Description, Access and Control_. SIGMOD Workshop 1974. Vol. 2. Ann Arbor, Michigan: Association for Computing Machinery. pp. 83–113\. doi:10.1145/800297.811532. ISBN 978-1450374187. OCLC 1175623233.
+16.  **^** Carl, Malamud (1990). _Analyzing Novell Networks_. Van Nostrand Reinhold. p. 294. ISBN 978-0442003647.
+17.  ^ _**a**_ _**b**_ Jin, Brenda; Sahni, Saurabh; Shevat, Amir (2018). _Designing Web APIs_. O'Reilly Media. ISBN 9781492026877.
+18.  **^** Fielding, Roy (2000). _Architectural Styles and the Design of Network-based Software Architectures_ (PhD). Retrieved September 18, 2020.
+19.  **^** Dotsika, Fefie (August 2010). "Semantic APIs: Scaling up towards the Semantic Web". _International Journal of Information Management_. **30** (4): 335–342\. doi:10.1016/j.ijinfomgt.2009.12.003.
+20.  **^** Odersky, Martin; Spoon, Lex; Venners, Bill (10 December 2008). "Combining Scala and Java". _www.artima.com_. Retrieved 29 July 2016.
+21.  **^** de Figueiredo, Luiz Henrique; Ierusalimschy, Roberto; Filho, Waldemar Celes (1994). "The design and implementation of a language for extending applications". _Proceedings of XXI Brazilian Seminar on Software and Hardware_. pp. 273–284\. CiteSeerX 10.1.1.47.5194. S2CID 59833827. Retrieved 29 July 2016.
+22.  **^** Sintes, Tony (13 July 2001). "Just what is the Java API anyway?". _JavaWorld_. Retrieved 2020-07-18.
+23.  **^** Winters, Titus; Tom Manshreck; Hyrum Wright, eds. (2020). _Software engineering at Google: lessons learned from programming over time_. Sebastopol, CA: O'Reilly Media. ISBN 9781492082798. OCLC 1144086840.
+24.  **^** Mastrangelo, Luis; Ponzanelli, Luca; Mocci, Andrea; Lanza, Michele; Hauswirth, Matthias; Nystrom, Nathaniel (2015-10-23). "Use at your own risk: the Java unsafe API in the wild". _Proceedings of the 2015 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications_. New York, New York, U.S.: Association for Computing Machinery. pp. 695–710\. doi:10.1145/2814270.2814313. ISBN 978-1-4503-3689-5.
+25.  **^** Emery, David. "Standards, APIs, Interfaces and Bindings". Acm.org. Archived from the original on 2015-01-16. Retrieved 2016-08-08.
+26.  **^** "F2PY.org". F2PY.org. Retrieved 2011-12-18.
+27.  **^** Fowler, Martin. "Inversion Of Control".
+28.  **^** Fayad, Mohamed. "Object-Oriented Application Frameworks".
+29.  **^** Lewine, Donald A. (1991). _POSIX Programmer's Guide_. O'Reilly & Associates, Inc. p. 1. ISBN 9780937175736. Retrieved 2 August 2016.
+30.  **^** West, Joel; Dedrick, Jason (2001). "Open source standardization: the rise of Linux in the network era" (PDF). _Knowledge, Technology & Policy_. **14** (2): 88–112\. doi:10.1007/PL00022278. Retrieved 2 August 2016.
+31.  **^** Microsoft (October 2001). "Support for Windows XP". Microsoft. p. 4. Archived from the original on 2009-09-26.
+32.  **^** Barney, Douglas (1987-11-02). "Balancing on the high wire of Microsoft's success". _Computerworld_. Vol. XXI, no. 44. p. SR15. Retrieved 2025-06-08.
+33.  **^** Barney, Douglas (1986-07-07). "Favoritism and the small firms". _Computerworld_. Vol. 20, no. 27. pp. 45, 50. Retrieved January 13, 2026.
+34.  **^** Gates, Bill; Manzi, Jim; Esber, Ed (1987-11-02). "The great software debate". _Computerworld_ (Interview). Vol. XXI, no. 44. Interviewed by Paul Gillin. p. SR7. Retrieved 2025-06-08.
+35.  **^** "LSB Introduction". Linux Foundation. 21 June 2012. Archived from the original on 2015-04-02. Retrieved 2015-03-27.
+36.  **^** Stoughton, Nick (April 2005). "Update on Standards" (PDF). USENIX. Retrieved 2009-06-04.
+37.  **^** Bierhoff, Kevin (23 April 2009). "API Protocol Compliance in Object-Oriented Software" (PDF). _CMU Institute for Software Research_. Retrieved 29 July 2016.
+38.  **^** Wilson, M. Jeff (10 November 2000). "Get smart with proxies and RMI". _JavaWorld_. Retrieved 2020-07-18.
+39.  **^** Henning, Michi; Vinoski, Steve (1999). _Advanced CORBA Programming with C++_. Addison-Wesley. ISBN 978-0201379273. Retrieved 16 June 2015.
+40.  **^** "API-fication" (PDF). _www.hcltech.com_. August 2014.
+41.  **^** Benslimane, Djamal; Schahram Dustdar; Amit Sheth (2008). "Services Mashups: The New Generation of Web Applications". _IEEE Internet Computing_. **12** (5). IEEE: 13–15\. Bibcode:2008IIC....12e..13B. doi:10.1109/MIC.2008.110. Retrieved 2019-10-01.
+42.  **^** Niccolai, James (2008-04-23), "So What Is an Enterprise Mashup, Anyway?", _PC World_, archived from the original on 2017-10-10, retrieved 2017-09-17
+43.  **^** Parr, Ben (21 May 2009). "The Evolution of the Social Media API". _Mashable_. Retrieved 26 July 2016.
+44.  **^** "GET trends/place". _developer.twitter.com_. Retrieved 2020-04-30.
+45.  **^** Parnas, D.L. (1972). "On the Criteria To Be Used in Decomposing Systems into Modules" (PDF). _Communications of the ACM_. **15** (12): 1053–1058\. doi:10.1145/361598.361623. S2CID 53856438.
+46.  **^** Garlan, David; Shaw, Mary (January 1994). "An Introduction to Software Architecture" (PDF). _Advances in Software Engineering and Knowledge Engineering_. **1**. Retrieved 8 August 2016.
+47.  **^** de Ternay, Guerric (Oct 10, 2015). "Business Ecosystem: Creating an Economic Moat". _BoostCompanies_. Archived from the original on 2016-09-17. Retrieved 2016-02-01.
+48.  **^** Boyd, Mark (2014-02-21). "Private, Partner or Public: Which API Strategy Is Best for Business?". _ProgrammableWeb_. Retrieved 2 August 2016.
+49.  **^** Weissbrot, Alison (7 July 2016). "Car Service APIs Are Everywhere, But What's In It For Partner Apps?". _AdExchanger_.
+50.  **^** "Cloudflare API v4 Documentation". _cloudflare_. 25 February 2020. Retrieved 27 February 2020.
+51.  **^** Liew, Zell (17 January 2018). "Car Service APIs Are Everywhere, But What's In It For Partner Apps". _Smashing Magazine_. Retrieved 27 February 2020.
+52.  ^ _**a**_ _**b**_ Shi, Lin; Zhong, Hao; Xie, Tao; Li, Mingshu (2011). _An Empirical Study on Evolution of API Documentation_. International Conference on Fundamental Approaches to Software Engineering. Lecture Notes in Computer Science. Vol. 6603. pp. 416–431\. doi:10.1007/978-3-642-19811-3\_29. ISBN 978-3-642-19810-6. Retrieved 22 July 2016.
+53.  **^** google/guava: Google Core Libraries for Java on GitHub
+54.  **^** Oracle. "How and When to Deprecate APIs". _Java SE Documentation_. Retrieved 2 August 2016.
+55.  **^** Mendez, Diego; Baudry, Benoit; Monperrus, Martin (2013). _Empirical evidence of large-scale diversity in API usage of object-oriented software_. 2013 IEEE 13th International Working Conference on Source Code Analysis and Manipulation (SCAM). pp. 43–52\. arXiv:1307.4062. doi:10.1109/SCAM.2013.6648183. ISBN 978-1-4673-5739-5. S2CID 6890739.
+56.  **^** Takanashi, Dean (19 February 2020). "Akamai: Cybercriminals are attacking APIs at financial services firms". _Venture Beat_. Retrieved 27 February 2020.
+57.  **^** Dekel, Uri; Herbsleb, James D. (May 2009). "Improving API Documentation Usability with Knowledge Pushing". _Institute for Software Research, School of Computer Science_. Bibcode:2009icse.confR..39D. CiteSeerX 10.1.1.446.4214.
+58.  **^** Parnin, Chris; Treude, Cristoph (May 2011). "Measuring API documentation on the web". _Proceedings of the 2nd International Workshop on Web 2.0 for Software Engineering_. pp. 25–30\. doi:10.1145/1984701.1984706. ISBN 9781450305952. S2CID 17751901. Retrieved 22 July 2016.
+59.  **^** Maalej, Waleed; Robillard, Martin P. (September 2012). "Patterns of Knowledge in API Reference Documentation" (PDF). _IEEE Transactions on Software Engineering_. **39** (9): 1264–1282\. doi:10.1109/TSE.2013.12. Retrieved 22 July 2016.
+60.  **^** Monperrus, Martin; Eichberg, Michael; Tekes, Elif; Mezini, Mira (3 December 2011). "What should developers be aware of? An empirical study on the directives of API documentation". _Empirical Software Engineering_. **17** (6): 703–737\. arXiv:1205.6363. doi:10.1007/s10664-011-9186-4. S2CID 8174618.
+61.  **^** "Annotations". Sun Microsystems. Archived from the original on 2011-09-25. Retrieved 2011-09-30..
+62.  **^** Bruch, Marcel; Mezini, Mira; Monperrus, Martin (2010). _Mining subclassing directives to improve framework reuse_. 2010 7th IEEE Working Conference on Mining Software Repositories (MSR 2010). pp. 141–150\. CiteSeerX 10.1.1.434.15. doi:10.1109/msr.2010.5463347. ISBN 978-1-4244-6802-7. S2CID 1026918.
+63.  **^** "Oracle and the End of Programming As We Know It". DrDobbs. 2012-05-01. Retrieved 2012-05-09.
+64.  **^** "APIs Can't be Copyrighted Says Judge in Oracle Case". TGDaily. 2012-06-01. Archived from the original on 2020-07-31. Retrieved 2012-12-06.
+65.  **^** "Oracle America, Inc. vs. Google Inc" (PDF). Wired. 2012-05-31. Retrieved 2013-09-22.
+66.  **^** "Oracle Am., Inc. v. Google Inc., No. 13-1021, Fed. Cir. 2014". _Justia Law_.
+67.  **^** Rosenblatt, Seth (May 9, 2014). "Court sides with Oracle over Android in Java patent appeal". _CNET_. Retrieved 2014-05-10.
+68.  **^** "Google beats Oracle – Android makes "fair use" of Java APIs". _Ars Technica_. 2016-05-26. Retrieved 2016-07-28.
+69.  **^** Decker, Susan (March 27, 2018). "Oracle Wins Revival of Billion-Dollar Case Against Google". _Bloomberg Businessweek_. Retrieved March 27, 2018.
+70.  **^** Lee, Timothy (January 25, 2019). "Google asks Supreme Court to overrule disastrous ruling on API copyrights". _Ars Technica_. Retrieved February 8, 2019.
+71.  **^** vkimber (2020-09-28). "Google LLC v. Oracle America, Inc". _LII / Legal Information Institute_. Retrieved 2021-03-06.
+72.  **^** "Supreme Court of the United States, No. 18–956, GOOGLE LLC, PETITIONER v. ORACLE AMERICA, INC" (PDF). April 5, 2021.
+
+## Further reading
+
+-   Bucher, Taina (16 November 2013). "Objects of Intense Feeling: The Case of the Twitter API". _Computational Culture_ (3). ISSN 2047-2390. Argues that "APIs are far from neutral tools" and form a key part of contemporary programming, understood as a fundamental part of culture.
+-   Ondrejka, Cory (February 28, 2014). "Maury, Innovation and Change". In 1853, he keynoted The Maritime Convention in Brussels, where he proposed a standardized reporting format for meteorological data — if it was 2005, he would have proposed a public API to let computers talk to each other — to enable more efficient and accurate data collection. (Textise URL.)
+-   U.S. Supreme Court. "What is an API?". In the court opinion _Google v. Oracle 2021_, pp. 3–7: "For each task, there is computer code; API (also known as Application Program Interface) is the method for calling that 'computer code' (instruction – like a recipe – rather than cooking instruction, this is machine instruction) to be carry out".
+
+## External links
+
+-   Forrester : IT industry : API Case : Google v. Oracle – May 20, 2021 – content format: Audio with text – length 26:41

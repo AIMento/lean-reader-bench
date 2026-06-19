@@ -1,0 +1,114 @@
+Create with AI or code, deploy instantly on production infrastructure. One platform to build and ship.
+
+![Meta](https://www.netlify.com/images/home/logos/meta-black.svg)
+
+![Mighty](https://www.netlify.com/images/home/logos/mighty-black.svg)
+
+![Finn](https://www.netlify.com/images/home/logos/finn-black.svg)
+
+![Autodesk](https://www.netlify.com/images/home/logos/autodesk-black.svg)
+
+![Zscaler](https://www.netlify.com/images/home/logos/zscaler-black.svg)
+
+![ServiceTitan](https://www.netlify.com/images/home/logos/servicetitan-black.svg)
+
+![Stack Overflow](https://www.netlify.com/images/home/logos/stack-overflow.svg)
+
+![Riot Games](https://www.netlify.com/images/home/logos/riot-games.svg)
+
+![Kubernetes](https://www.netlify.com/images/home/logos/kubernetes.svg)
+
+![Figma](https://www.netlify.com/images/home/logos/figma.svg)
+
+How it works
+
+## Build your way.  
+Ship on one platform.
+
+Every path runs on the same workflow and production infrastructure, powering millions of sites and apps.
+
+### Start with code or AI
+
+Start with a prompt, push from Git, or drag and drop. All paths lead to the same project.
+
+### Build fullstack apps
+
+Connect APIs, manage data, optimize images, and add AI features from your first prompt.
+
+### Go live everywhere
+
+Ship to a global CDN in seconds. Fast for every user, instantly.
+
+> I can push a change, and within 30 seconds the site is completely rebuilt.
+
+Use cases
+
+## For every kind of web app.
+
+Build everything from marketing sites to AI apps on one platform.
+
+### Launch AI features with one gateway
+
+Prototype, test, and scale AI-powered experiences faster. Product teams can iterate with agents while engineers productionize on the same platform.
+
+*   Prototype and ship AI features with **Agent Runners**
+*   Connect to OpenAI, Anthropic, and Gemini through **AI Gateway**
+*   Deploy backend logic as API endpoints with **Serverless Functions**
+
+Example: Generate alt text with OpenAI
+
+```
+import OpenAI from "openai";
+
+export default async (req: Request) => {
+  const { description } = await req.json();
+  const client = new OpenAI();
+
+  const res = await client.responses.create({
+    model: "gpt-5-mini",
+    input: [
+      { role: "user", content: `Write concise alt text for: ${description}` },
+    ],
+  });
+
+  return Response.json({ altText: res.output_text });
+};
+
+export const config = { path: "/api/alt-text" };
+```
+
+10M+developers
+
+60M+apps deployed
+
+99.99%uptime
+
+## Start your way.
+
+Choose the workflow that fits how you work.
+
+Start with a prompt
+
+Describe what you want to build. An AI agent handles the rest.
+
+[Start for free](https://app.netlify.com/signup)
+
+Deploy from Git
+
+Auto-deploy on every push. Every PR gets a preview URL.
+
+[Import a project](https://app.netlify.com/start)
+
+Deploy from terminal
+
+Deploy directly from your working directory. No login required to start.
+
+`npm i -g netlify-cli netlify deploy --allow-anonymous`
+
+[Get started with CLI](https://docs.netlify.com/api-and-cli-guides/cli-guides/get-started-with-cli/)
+
+Drag and drop
+
+Drop your project folder and it's live in seconds. No setup required.
+
+[Try Netlify Drop](https://app.netlify.com/drop)

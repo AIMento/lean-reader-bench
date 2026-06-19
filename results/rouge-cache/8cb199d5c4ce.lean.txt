@@ -1,0 +1,67 @@
+## Inquiring agents want to know:
+
+$PROMPTCopied!
+
+How can I use Redis Iris as a real-time context engine for AI apps?
+
+## What’s your problem?
+
+80%
+
+of AI projects stall without real-time context.
+
+$PROMPTCopied!
+
+How can I use Redis Context Retriever to improve the quality of my AI output?
+
+## Start building in minutes
+
+Get started with Redis in your favorite LLM’s coding tools.
+
+See the docs
+
+## Stop stitching tools together
+
+Work seamlessly from any stack with one unified platform for real-time agents and apps
+
+## Stop stitching tools together
+
+Work seamlessly from any stack with one unified platform for real-time agents and apps
+
+Trusted by fast companies across the globe
+
+## Deploy anywhere. Scale any way.
+
+### In the cloud
+
+Build on any cloud while we host Redis for you.
+
+Get started
+
+### On-prem/hybrid cloud
+
+Get the best Redis on the market and manage your own deployments.
+
+Get started
+
+### With open source
+
+Download Redis 8 and build with free open source software.
+
+Get started
+
+FLEX
+
+### Scale your data. Not your spend.
+
+Tiered RAM + flash storage for TB-scale at up to 80% less cost.
+
+ACTIVE-ACTIVE
+
+### Scale your users. Not your downtime.
+
+Multi-region replication for local-speed reads and zero-downtime failover.
+
+## Get started
+
+Speak to a Redis expert and learn more about enterprise-grade Redis today.

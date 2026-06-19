@@ -1,0 +1,40 @@
+**Notice:** This page displays a fallback because interactive scripts did not run. Possible causes include disabled JavaScript or failure to load scripts or stylesheets.
+
+## Download
+
+Python source code and installers are available for download for all versions!
+
+Latest: [Python 3.14.6](https://www.python.org/downloads/release/python-3146/)
+
+## Docs
+
+Documentation for Python's standard library, along with tutorials and guides, are available online.
+
+[docs.python.org](https://docs.python.org/)
+
+## Jobs
+
+Looking for work or have a Python related position that you're trying to hire for? Our **relaunched community-run job board** is the place to go.
+
+[jobs.python.org](https://jobs.python.org/)
+
+## Latest News
+
+[More](https://blog.python.org/ "More News")
+
+*   2026-06-18 [PSF Board Election Dates for 2026](https://pyfound.blogspot.com/2026/06/psf-board-election-dates-for-2026.html)
+*   2026-06-17 [Everything Security at PyCon US 2026](https://pyfound.blogspot.com/2026/06/everything-security-at-pycon-us-2026.html)
+*   2026-06-10 [Python 3.14.6 and 3.13.14 are now available!](https://blog.python.org/2026/06/python-3146-31314/)
+*   2026-06-04 [PSF Strategic Plan 2026 Draft: Open for Community Feedback](https://pyfound.blogspot.com/2026/06/psf-strategic-plan-2026-draft-open-for.html)
+*   2026-06-02 [No Starch Press Humble Bundle: Grab a Deal and Support the PSF!](https://pyfound.blogspot.com/2026/06/no-starch-press-humble-bundle-grab-deal.html)
+
+## Use Python for…
+
+[More](https://www.python.org/about/apps "More Applications")
+
+*   **Web Development**: [Django](https://www.djangoproject.com/), [Pyramid](https://trypyramid.com/), [Bottle](https://bottlepy.org/), [Tornado](https://www.tornadoweb.org/), [Flask](https://flask.palletsprojects.com/), [Litestar](https://litestar.dev/), [FastAPI](https://fastapi.tiangolo.com/)
+*   **GUI Development**: [tkInter](https://en.wikipedia.org/wiki/Tkinter), [PyGObject](https://pygobject.gnome.org/), [PyQt](https://riverbankcomputing.com/software/pyqt/intro), [PySide](https://wiki.qt.io/Qt_for_Python), [Kivy](https://kivy.org/), [wxPython](https://www.wxpython.org/), [DearPyGui](https://dearpygui.readthedocs.io/en/latest/)
+*   **AI and Machine Learning**: [PyTorch](https://pytorch.org/), [TensorFlow](https://www.tensorflow.org/), [scikit-learn](https://scikit-learn.org/), [Transformers](https://huggingface.co/docs/transformers/), [Anthropic](https://docs.anthropic.com/), [LangChain](https://langchain.com/)
+*   **Scientific and Numeric**: [SciPy](https://scipy.org/), [Pandas](https://pandas.pydata.org/), [IPython](https://ipython.org/)
+*   **Software Development**: [Buildbot](https://buildbot.net/), [Trac](https://trac.edgewall.org/), [Roundup](https://www.roundup-tracker.org/)
+*   **System Administration**: [Ansible](https://docs.ansible.com/), [Salt](https://saltproject.io/), [OpenStack](https://www.openstack.org/), [xonsh](https://xon.sh/)

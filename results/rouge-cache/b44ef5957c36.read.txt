@@ -1,0 +1,101 @@
+From Wikipedia, the free encyclopedia
+
+Model Context Protocol
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Model_Context_Protocol_logo.svg/250px-Model_Context_Protocol_logo.svg.png)](https://en.wikipedia.org/wiki/File:Model_Context_Protocol_logo.svg)
+
+Developed by
+
+[Anthropic](https://en.wikipedia.org/wiki/Anthropic "Anthropic")
+
+Introduced
+
+November 25, 2024; 18 months ago
+
+Industry
+
+[Artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence "Artificial intelligence")
+
+Connector type
+
+*   [TypeScript](https://en.wikipedia.org/wiki/TypeScript "TypeScript")
+*   [Python](https://en.wikipedia.org/wiki/Python_\(programming_language\) "Python (programming language)")
+*   [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)")
+*   [Kotlin](https://en.wikipedia.org/wiki/Kotlin_\(programming_language\) "Kotlin (programming language)")
+*   [C#](https://en.wikipedia.org/wiki/C_Sharp_\(programming_language\) "C Sharp (programming language)")
+*   [Go](https://en.wikipedia.org/wiki/Go_\(programming_language\) "Go (programming language)")
+*   [PHP](https://en.wikipedia.org/wiki/PHP "PHP")
+*   [Perl](https://en.wikipedia.org/wiki/Perl_\(programming_language\) "Perl (programming language)")
+*   [Ruby](https://en.wikipedia.org/wiki/Ruby_\(programming_language\) "Ruby (programming language)")
+*   [Rust](https://en.wikipedia.org/wiki/Rust_\(programming_language\) "Rust (programming language)")
+*   [Swift](https://en.wikipedia.org/wiki/Swift_\(programming_language\) "Swift (programming language)")
+
+Website
+
+[modelcontextprotocol.io](https://modelcontextprotocol.io/) [![Edit this at Wikidata](https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png)](https://www.wikidata.org/wiki/Q133436854#P856 "Edit this at Wikidata")
+
+[![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Model_Context_Protocol_Component_diagram.svg/250px-Model_Context_Protocol_Component_diagram.svg.png)](https://en.wikipedia.org/wiki/File:Model_Context_Protocol_Component_diagram.svg)
+
+Relationship between MCP client and server
+
+The **Model Context Protocol** (**MCP**) is an [open standard](https://en.wikipedia.org/wiki/Open_standard "Open standard") and [open-source](https://en.wikipedia.org/wiki/Open-source "Open-source") [framework](https://en.wikipedia.org/wiki/Software_framework "Software framework") introduced by [Anthropic](https://en.wikipedia.org/wiki/Anthropic "Anthropic") in November 2024 to standardize the way [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence "Artificial intelligence") (AI) systems like [large language models](https://en.wikipedia.org/wiki/Large_language_model "Large language model") (LLMs) integrate and share data with external tools, systems, and data sources.[\[1\]](#cite_note-venturebeat-2024-11-25-1) MCP provides a standardized interface for reading files, executing functions, and handling contextual prompts.[\[2\]](#cite_note-venturebeat_2025-03-27-2) Following its announcement, the protocol was adopted by major AI providers, including [OpenAI](https://en.wikipedia.org/wiki/OpenAI "OpenAI") and [Google DeepMind](https://en.wikipedia.org/wiki/Google_DeepMind "Google DeepMind").[\[3\]](#cite_note-TechCrunch_2025-03-25-3)[\[4\]](#cite_note-TechCrunch_2025-04-09-4)
+
+MCP was announced by [Anthropic](https://en.wikipedia.org/wiki/Anthropic "Anthropic") in November 2024 as an [open standard](https://en.wikipedia.org/wiki/Open_standard "Open standard")[\[5\]](#cite_note-verge_2024-11-25-5) for connecting AI assistants to data systems such as [content repositories](https://en.wikipedia.org/wiki/Content_repository "Content repository"), [business management tools](https://en.wikipedia.org/wiki/Business_management_tools "Business management tools"), and [development environments](https://en.wikipedia.org/wiki/Deployment_environment#Development "Deployment environment").[\[6\]](#cite_note-anthropic_2024-11-6) The protocol was created at Anthropic by engineers David Soria Parra and Justin Spahr-Summers.[\[6\]](#cite_note-anthropic_2024-11-6) It aims to address the challenge of [information silos](https://en.wikipedia.org/wiki/Information_silo "Information silo") and [legacy systems](https://en.wikipedia.org/wiki/Legacy_system "Legacy system").[\[6\]](#cite_note-anthropic_2024-11-6) Before MCP, developers often had to build custom connectors for each data source or tool, resulting in what Anthropic described as an "N×M" [data integration](https://en.wikipedia.org/wiki/Data_integration "Data integration") problem.[\[6\]](#cite_note-anthropic_2024-11-6)[\[7\]](#cite_note-ars-usbc-7)
+
+Earlier stop-gap approaches—such as [OpenAI](https://en.wikipedia.org/wiki/OpenAI "OpenAI")'s 2023 "function-calling" [API](https://en.wikipedia.org/wiki/API "API") and the [ChatGPT](https://en.wikipedia.org/wiki/ChatGPT "ChatGPT") plug-in framework—solved similar problems but required vendor-specific connectors.[\[7\]](#cite_note-ars-usbc-7) MCP re-uses the message-flow ideas of the [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol "Language Server Protocol") (LSP) and is transported over [JSON-RPC](https://en.wikipedia.org/wiki/JSON-RPC "JSON-RPC") 2.0.[\[8\]](#cite_note-Ouellette-2025-8)
+
+In December 2025, [Anthropic](https://en.wikipedia.org/wiki/Anthropic "Anthropic") donated the MCP to the [Agentic AI Foundation](https://en.wikipedia.org/wiki/Agentic_AI_Foundation "Agentic AI Foundation") (AAIF), a directed fund under the [Linux Foundation](https://en.wikipedia.org/wiki/Linux_Foundation "Linux Foundation"), co-founded by Anthropic, Block and OpenAI, with support from other companies.[\[9\]](#cite_note-9)
+
+The protocol was released with [software development kits](https://en.wikipedia.org/wiki/Software_development_kits "Software development kits") (SDKs) in [programming languages](https://en.wikipedia.org/wiki/Programming_languages "Programming languages") including [Python](https://en.wikipedia.org/wiki/Python_\(programming_language\) "Python (programming language)"), [TypeScript](https://en.wikipedia.org/wiki/TypeScript "TypeScript"), [C#](https://en.wikipedia.org/wiki/C_Sharp_\(programming_language\) "C Sharp (programming language)") and [Java](https://en.wikipedia.org/wiki/Java_\(programming_language\) "Java (programming language)") and examples of MCP server implementations.[\[8\]](#cite_note-Ouellette-2025-8)[\[10\]](#cite_note-10)
+
+MCP defines a standardized framework for integrating AI systems with external data sources and tools.[\[2\]](#cite_note-venturebeat_2025-03-27-2) MCP enables applications such as querying structured databases with plain language in the field of natural language data access.[\[8\]](#cite_note-Ouellette-2025-8)
+
+The protocol is used in [AI-assisted software development](https://en.wikipedia.org/wiki/AI-assisted_software_development "AI-assisted software development") tools. [Integrated development environments](https://en.wikipedia.org/wiki/Integrated_development_environment "Integrated development environment") (IDEs), coding platforms such as [Replit](https://en.wikipedia.org/wiki/Replit "Replit"), and code intelligence tools like [Sourcegraph](https://en.wikipedia.org/wiki/Sourcegraph "Sourcegraph") have adopted MCP to grant AI coding assistants real-time access to project context.[\[5\]](#cite_note-verge_2024-11-25-5)
+
+MCP Apps is an official extension to the Model Context Protocol built on mcp-ui. While the base MCP specification is restricted to text and structured data, MCP Apps standardizes the delivery of interactive user interfaces—such as dashboards, forms, and data visualizations—from MCP servers to host applications like [Claude](https://en.wikipedia.org/wiki/Claude_\(language_model\) "Claude (language model)") and [ChatGPT](https://en.wikipedia.org/wiki/ChatGPT "ChatGPT").[\[11\]](#cite_note-11)
+
+In March 2025, OpenAI officially adopted the MCP, after having integrated the standard across its products, including the [ChatGPT](https://en.wikipedia.org/wiki/ChatGPT "ChatGPT") desktop app.[\[3\]](#cite_note-TechCrunch_2025-03-25-3)[\[2\]](#cite_note-venturebeat_2025-03-27-2) In September 2025, OpenAI added support for MCP to ChatGPT apps. This allows for third-party access inside ChatGPT.[\[12\]](#cite_note-12)
+
+MCP can be integrated with [Microsoft](https://en.wikipedia.org/wiki/Microsoft "Microsoft") Semantic Kernel, and [Azure](https://en.wikipedia.org/wiki/Microsoft_Azure "Microsoft Azure") OpenAI.[\[13\]](#cite_note-13) MCP servers can be deployed to [Cloudflare](https://en.wikipedia.org/wiki/Cloudflare "Cloudflare").[\[14\]](#cite_note-14)
+
+In April 2026, the AAIF held the MCP Dev Summit North America in New York City, drawing approximately 1,200 attendees.[\[15\]](#cite_note-15)
+
+_[The Verge](https://en.wikipedia.org/wiki/The_Verge "The Verge")_ reported that MCP addresses a growing demand for AI agents that are contextually aware and capable of pulling from diverse sources.[\[5\]](#cite_note-verge_2024-11-25-5)
+
+In April 2025, security researchers released an analysis that concluded there are multiple outstanding security issues with MCP, including [prompt injection](https://en.wikipedia.org/wiki/Prompt_injection "Prompt injection")[\[16\]](#cite_note-16) and poisoned tools that allow for data exfiltration through other connected tools.[\[17\]](#cite_note-17)
+
+MCP has been likened to [OpenAPI](https://en.wikipedia.org/wiki/OpenAPI_Specification "OpenAPI Specification"), a similar specification that aims to describe APIs.[\[18\]](#cite_note-18)[\[19\]](#cite_note-19)
+
+*   [Agent2Agent](https://en.wikipedia.org/wiki/Agent2Agent "Agent2Agent") – Open protocol for communication between AI agents
+*   [AI governance](https://en.wikipedia.org/wiki/AI_governance "AI governance") – Guidelines and laws to regulate AI
+*   [Application programming interface](https://en.wikipedia.org/wiki/Application_programming_interface "Application programming interface") – Connection between computers or programs
+*   [LangChain](https://en.wikipedia.org/wiki/LangChain "LangChain") – Language model application development framework
+*   [Machine learning](https://en.wikipedia.org/wiki/Machine_learning "Machine learning") – Subset of artificial intelligence
+*   [Software agent](https://en.wikipedia.org/wiki/Software_agent "Software agent") – Computer program acting for a user
+
+1.  **[^](#cite_ref-venturebeat-2024-11-25_1-0)** David, Emilia (November 25, 2024). ["Anthropic releases Model Context Protocol to standardize AI-data integration"](https://venturebeat.com/data-infrastructure/anthropic-releases-model-context-protocol-to-standardize-ai-data-integration/). [VentureBeat](https://en.wikipedia.org/wiki/VentureBeat "VentureBeat"). Retrieved 2025-05-12.
+2.  ^ [_**a**_](#cite_ref-venturebeat_2025-03-27_2-0) [_**b**_](#cite_ref-venturebeat_2025-03-27_2-1) [_**c**_](#cite_ref-venturebeat_2025-03-27_2-2) Kumar, Vinay (March 26, 2025). ["The open source Model Context Protocol was just updated — here's why it's a big deal"](https://venturebeat.com/ai/the-open-source-model-context-protocol-was-just-updated-heres-why-its-a-big-deal/). [VentureBeat](https://en.wikipedia.org/wiki/VentureBeat "VentureBeat"). Retrieved 2025-05-12.
+3.  ^ [_**a**_](#cite_ref-TechCrunch_2025-03-25_3-0) [_**b**_](#cite_ref-TechCrunch_2025-03-25_3-1) Wiggers, Kyle (March 25, 2025). ["OpenAI adopts rival Anthropic's standard for connecting AI models to data"](https://techcrunch.com/2025/03/26/openai-adopts-rival-anthropics-standard-for-connecting-ai-models-to-data/). [TechCrunch](https://en.wikipedia.org/wiki/TechCrunch "TechCrunch").
+4.  **[^](#cite_ref-TechCrunch_2025-04-09_4-0)** Wiggers, Kyle (April 9, 2025). ["Google to embrace Anthropic's standard for connecting AI models to data"](https://techcrunch.com/2025/04/09/google-says-itll-embrace-anthropics-standard-for-connecting-ai-models-to-data/). TechCrunch. Retrieved 2025-05-12.
+5.  ^ [_**a**_](#cite_ref-verge_2024-11-25_5-0) [_**b**_](#cite_ref-verge_2024-11-25_5-1) [_**c**_](#cite_ref-verge_2024-11-25_5-2) Roth, Emma (November 25, 2024). ["Anthropic launches tool to connect AI systems directly to datasets"](https://www.theverge.com/2024/11/25/24305774/anthropic-model-context-protocol-data-sources). [The Verge](https://en.wikipedia.org/wiki/The_Verge "The Verge").
+6.  ^ [_**a**_](#cite_ref-anthropic_2024-11_6-0) [_**b**_](#cite_ref-anthropic_2024-11_6-1) [_**c**_](#cite_ref-anthropic_2024-11_6-2) [_**d**_](#cite_ref-anthropic_2024-11_6-3) ["Introducing the Model Context Protocol"](https://www.anthropic.com/news/model-context-protocol). Anthropic. November 25, 2024. Retrieved 2025-05-12.
+7.  ^ [_**a**_](#cite_ref-ars-usbc_7-0) [_**b**_](#cite_ref-ars-usbc_7-1) Edwards, Benj (1 April 2025). ["MCP: The new "USB-C for AI" that's bringing fierce rivals together"](https://arstechnica.com/information-technology/2025/04/mcp-the-new-usb-c-for-ai-thats-bringing-fierce-rivals-together/). _Ars Technica_. Retrieved 2025-05-24.
+8.  ^ [_**a**_](#cite_ref-Ouellette-2025_8-0) [_**b**_](#cite_ref-Ouellette-2025_8-1) [_**c**_](#cite_ref-Ouellette-2025_8-2) Ouellette, Michael (2025-05-09). ["Model context protocol: the next big step in generating value from AI"](https://www.engineering.com/model-context-protocol-the-next-big-step-in-generating-value-from-ai/). _Engineering.com_. Retrieved 2025-06-23.
+9.  **[^](#cite_ref-9)** Bellan, Rebecca (2025-12-09). ["OpenAI, Anthropic, and Block join new Linux Foundation effort to standardize the AI agent era"](https://techcrunch.com/2025/12/09/openai-anthropic-and-block-join-new-linux-foundation-effort-to-standardize-the-ai-agent-era/). _TechCrunch_. Retrieved 2025-12-10.
+10.  **[^](#cite_ref-10)** ["Model Context Protocol"](https://github.com/modelcontextprotocol). _GitHub_. Retrieved 2025-06-20.
+11.  **[^](#cite_ref-11)** ["MCP Apps, the Model Context Protocol's first official extension, turns AI responses into interactive interfaces"](https://the-decoder.com/mcp-apps-the-model-context-protocols-first-official-extension-turns-ai-responses-into-interactive-interfaces/). _the decoder_. 2026-01-26. [Archived](https://web.archive.org/web/20260126200944/https://the-decoder.com/mcp-apps-the-model-context-protocols-first-official-extension-turns-ai-responses-into-interactive-interfaces/) from the original on 2026-01-26.
+12.  **[^](#cite_ref-12)** ["OpenAI adds 'powerful but dangerous' support for MCP in ChatGPT dev mode"](https://venturebeat.com/dev/openai-adds-powerful-but-dangerous-support-for-mcp-in-chatgpt-dev-mode). VentureBeat. September 11, 2025. Retrieved 2026-04-09.
+13.  **[^](#cite_ref-13)** ["Using the Model Context Protocol in Azure and beyond"](https://www.infoworld.com/article/3975058/using-the-model-context-protocol-in-azure-and-beyond.html). _InfoWorld_. 2025-05-01. Retrieved 2026-06-14.
+14.  **[^](#cite_ref-14)** ["Cloudflare Outlines MCP Architecture as Enterprises Confront Security and Governance Risks"](https://www.infoq.com/news/2026/04/cloudflare-mcp/). _InfoQ_. 2026-04-22. Retrieved 2026-06-14.
+15.  **[^](#cite_ref-15)** ["AAIF's MCP Dev Summit: Gateways, gRPC, and Observability Signal Protocol Hardening"](https://www.infoq.com/news/2026/04/aaif-mcp-summit/). InfoQ. 2026-04-14. Retrieved 20 April 2026.
+16.  **[^](#cite_ref-16)** Lakshmanan, Ravie (30 April 2025). ["Researchers Demonstrate How MCP Prompt Injection Can Be Used for Both Attack and Defense"](https://thehackernews.com/2025/04/experts-uncover-critical-mcp-and-a2a.html). thehackernews.com.
+17.  **[^](#cite_ref-17)** Doerrfeld, Bill (2025-04-24). ["Building With MCP? Mind the Security Gaps"](https://thenewstack.io/building-with-mcp-mind-the-security-gaps/). _The New Stack_. Retrieved 2026-06-14.
+18.  **[^](#cite_ref-18)** MacManus, Richard (13 March 2025). ["MCP: The Missing Link Between AI Agents and APIs"](https://thenewstack.io/mcp-the-missing-link-between-ai-agents-and-apis/). _The New Stack_. Retrieved 29 May 2025.
+19.  **[^](#cite_ref-19)** Fanelli, Alessio. ["Why MCP Won"](https://www.latent.space/p/why-mcp-won). _www.latent.space_. Retrieved 29 May 2025.
+
+*   Hou, Xinyi; Zhao, Yanjie; Wang, Shenao; Wang, Haoyu (2025). "Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions". [arXiv](https://en.wikipedia.org/wiki/ArXiv_\(identifier\) "ArXiv (identifier)"):[2503.23278](https://arxiv.org/abs/2503.23278) \[[cs.CR](https://arxiv.org/archive/cs.CR)\].
+*   Edwards, Benj (April 1, 2025). ["MCP: The new "USB-C for AI" that's bringing fierce rivals together"](https://arstechnica.com/information-technology/2025/04/mcp-the-new-usb-c-for-ai-thats-bringing-fierce-rivals-together). [Ars Technica](https://en.wikipedia.org/wiki/Ars_Technica "Ars Technica").
+*   Jackson, Fiona (March 28, 2025). ["OpenAI Agents Now Support Rival Anthropic's Protocol, Making Data Access 'Simpler, More Reliable'"](https://www.techrepublic.com/article/news-openai-anthropic-model-context-protocol/). [TechRepublic](https://en.wikipedia.org/wiki/TechRepublic "TechRepublic").
+
+*   [Official website](https://modelcontextprotocol.io/) [![Edit this at Wikidata](https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png)](https://www.wikidata.org/wiki/Q133436854#P856 "Edit this at Wikidata")
+*   [Model Context Protocol](https://github.com/modelcontextprotocol) on [GitHub](https://en.wikipedia.org/wiki/GitHub "GitHub")
