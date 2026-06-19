@@ -6,7 +6,7 @@
     "gt_words": 516,
     "lean_words": 1070,
     "read_words": 1225,
-    "lean_extractor": "readability",
+    "lean_extractor": null,
     "gt_handcorrected": false
   },
   {
@@ -16,7 +16,7 @@
     "gt_words": 1605,
     "lean_words": 3056,
     "read_words": 3360,
-    "lean_extractor": "readability",
+    "lean_extractor": null,
     "gt_handcorrected": false
   },
   {
@@ -26,7 +26,7 @@
     "gt_words": 3479,
     "lean_words": 5588,
     "read_words": 6172,
-    "lean_extractor": "readability",
+    "lean_extractor": null,
     "gt_handcorrected": false
   },
   {
@@ -36,7 +36,7 @@
     "gt_words": 3644,
     "lean_words": 5991,
     "read_words": 6975,
-    "lean_extractor": "readability",
+    "lean_extractor": null,
     "gt_handcorrected": false
   },
   {
@@ -46,7 +46,27 @@
     "gt_words": 5348,
     "lean_words": 8542,
     "read_words": 9857,
-    "lean_extractor": "readability",
+    "lean_extractor": null,
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "73e2202b7b5d",
+    "url": "https://en.wikipedia.org/wiki/World_War_II",
+    "category": "reference",
+    "gt_words": 13248,
+    "lean_words": 26368,
+    "read_words": 31452,
+    "lean_extractor": null,
+    "gt_handcorrected": false
+  },
+  {
+    "sha": "c17b647eea74",
+    "url": "https://en.wikipedia.org/wiki/Evolution",
+    "category": "reference",
+    "gt_words": 10273,
+    "lean_words": 23740,
+    "read_words": 28384,
+    "lean_extractor": null,
     "gt_handcorrected": false
   },
   {
@@ -56,7 +76,7 @@
     "gt_words": 1423,
     "lean_words": 1457,
     "read_words": 2121,
-    "lean_extractor": "defuddle",
+    "lean_extractor": null,
     "gt_handcorrected": true
   },
   {
@@ -66,7 +86,7 @@
     "gt_words": 1357,
     "lean_words": 1398,
     "read_words": 1522,
-    "lean_extractor": "defuddle",
+    "lean_extractor": null,
     "gt_handcorrected": true
   },
   {
@@ -76,7 +96,7 @@
     "gt_words": 1893,
     "lean_words": 1858,
     "read_words": 1998,
-    "lean_extractor": "defuddle",
+    "lean_extractor": null,
     "gt_handcorrected": false
   },
   {
@@ -86,7 +106,7 @@
     "gt_words": 296,
     "lean_words": 184,
     "read_words": 199,
-    "lean_extractor": "defuddle",
+    "lean_extractor": null,
     "gt_handcorrected": false
   },
   {
@@ -96,7 +116,7 @@
     "gt_words": 261,
     "lean_words": 219,
     "read_words": 262,
-    "lean_extractor": "defuddle",
+    "lean_extractor": null,
     "gt_handcorrected": true
   },
   {
@@ -106,7 +126,7 @@
     "gt_words": 484,
     "lean_words": 353,
     "read_words": 365,
-    "lean_extractor": "readability",
+    "lean_extractor": null,
     "gt_handcorrected": false
   },
   {
@@ -116,7 +136,7 @@
     "gt_words": 4456,
     "lean_words": 4457,
     "read_words": 4450,
-    "lean_extractor": "defuddle",
+    "lean_extractor": null,
     "gt_handcorrected": true
   }
 ]

@@ -30,15 +30,19 @@ export const sha = (u) => createHash('sha1').update(u).digest('hex').slice(0, 12
 const td = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced' });
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
-// Stratified sample (12). Biased toward jina_keep<0.7 (the "suspected dropped content" set). Sizes kept hand-verifiable.
-// ref(5): resolve the reference bucket — span word_keep 0.86-0.91. tech(3): incl. MDN flex (wk 0.69, biggest drop).
-// mkt(3): the word_keep<1 marketing pages (lean emitted FEWER words than readability). blog(1): clean-prose scorer control.
+// Stratified sample (14). Weighted toward low-retention / suspected-drop pages. Sizes kept hand-verifiable except the two
+// reference giants (structure-verified: head/tail/section hierarchy checked vs live, not full-read).
+// ref(7): resolve the reference bucket — span the FULL word_keep range 0.84-0.91, incl. both lowest-wk giants (WWII, Evolution).
+// tech(3): incl. MDN flex (wk 0.69, biggest drop). mkt(3): the word_keep<1 marketing pages (lean emitted FEWER words than
+// readability). blog(1): clean-prose scorer control.
 export const SAMPLE = [
   { url: 'https://en.wikipedia.org/wiki/Model_Context_Protocol', category: 'reference' },     // wk0.87 jk0.18
   { url: 'https://en.wikipedia.org/wiki/Docker_(software)', category: 'reference' },           // wk0.91 jk0.46
   { url: 'https://en.wikipedia.org/wiki/Application_programming_interface', category: 'reference' }, // wk0.91 jk0.57
   { url: 'https://en.wikipedia.org/wiki/Object-oriented_programming', category: 'reference' }, // wk0.86 jk0.48
   { url: 'https://en.wikipedia.org/wiki/Functional_programming', category: 'reference' },      // wk0.87 jk0.57
+  { url: 'https://en.wikipedia.org/wiki/World_War_II', category: 'reference' },                 // wk0.84 jk0.71 — lowest-wk giant
+  { url: 'https://en.wikipedia.org/wiki/Evolution', category: 'reference' },                    // wk0.84 jk0.59 — lowest-wk giant
   { url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/flex', category: 'techdocs' },      // wk0.69 jk0.17 (top suspect)
   { url: 'https://docs.github.com/en/get-started/start-your-journey/hello-world', category: 'techdocs' }, // wk0.92 jk0.53
   { url: 'https://nodejs.org/api/path.html', category: 'techdocs' },                           // wk0.93 jk0.61
